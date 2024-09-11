@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-  eturn (
+  return (
     <Provider>
       <div className="App">
         <Dashboard />
