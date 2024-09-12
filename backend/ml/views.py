@@ -2,9 +2,9 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from datetime import datetime
-import fix_yahoo_finance as yf
+# import fix_yahoo_finance as yf
 
-# import yfinance as yf
+import yfinance as yf
 
 # data libraries
 import math
@@ -24,8 +24,9 @@ class Data(APIView):
 
         # print(stock, start, end,'stockstartend')
         print(start, type(start), 'startttt')
-        yf.pdr_override()
+        # yf.pdr_override()
         df = yf.download(stock,  start=start, end=end)
+        print('hello')
 
         df.reset_index(inplace=True)
 
